@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Crystal Collector Game</title>
+    <meta charset="utf-8">
+    <!-- run Eric Meyer's reset CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- my style sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Bootstrap version 4.x -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- In order to duplicate the UI presented in the instructions we introduce -->
+        <!-- a outer single row-0 with two column design -->
+        <div class="row">
+
+            <!-- create 2 columns to model instructions - col 1 has all game info -->
+            <!-- while col 2 is left empty -->
+            <div class="col-lg-6">
+
+                <!-- Row 1 - Display Game Title -->
+                <div class="row gameTitle">
+                    <h1>Crystals Collector!</h1>
+                </div>
+
+                <!-- Row 2 - Display Instructions -->
+                <div class="row gameInstructions">
+                    <h5>You will be given a random number at the start of the game.</h5>
+                    <h5>There are four crystals below. By clicking on a crystal you will add a specific amount of
+                        points to your
+                        total score.</h5>
+                    <h5>You win the game by matching your total score to random number, you lose the game if your total
+                        score
+                        goes
+                        above the random number</h5>
+                    <h5>The value of each crystal is hidden from you until you click on it.</h5>
+                    <h5>Each time when the game starts, the game will change the values of each crystal.</h5>
+
+                </div>
+
+                <!-- Row 3 - Display Number Score and Current Wins and Losses -->
+                <div class="row">
+
+                    <!-- Row 3 Col 1 - Target Number -->
+                    <div class="col-lg-4 targetNumber">
+                        <div id="currentTarget">
+                            <h1>99</h1>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 - Col 2 - Wins and Losses -->
+                    <div class="col-lg-4 winLossBox">
+                        <p id="playerMsg">Press a crystal to start</p>
+                        <p id="numWins">Wins: 0</p>
+                        <p id="numLosses">Losses: 0</p>
+                    </div>
+
+                </div>
+
+                <!-- Row 4 - Display Crystals -->
+                <div class="row">
+
+                    <!-- place the crystal buttons -->
+                    <button type="button" class="blueButton"><img src="assets/images/BlueCrystal.png" /></button>
+                    <button type="button" class="yellowButton"><img src="assets/images/YellowCrystal.png" /></button>
+                    <button type="button" class="redButton"><img src="assets/images/RedCrystal.png" /></button>
+                    <button type="button" class="greenButton"><img src="assets/images/GreenCrystal.png" /></button>
+
+                </div>
+
+                <!-- Row 5 - Display Your Current Score Title -->
+                <div class="row playerMsg">
+                    <div class="col-lg-4">
+                        <div id="yourScore">
+                            <h5>Your score...</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <!-- intentionally left blank-->
+                    </div>
+                </div>
+
+                <!-- Row 6 - Current Score -->
+                <div class="row">
+                    <div class="col-lg-4 currentScore">
+                        <div id="currScore">
+                            <h1>99</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <!-- intentionally left blank-->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- This column is left empty-->
+            <div class=col-lg-6>
+                <!-- Intentionally left empty-->
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="assets/javascript/game.js" type="text/javascript">
+    </script>
+
+</body>
+
+</html>
